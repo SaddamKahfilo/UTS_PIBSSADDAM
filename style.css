@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: relative;
+    background-image: url('pexels-esan-2085998.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    flex-grow: 1;
+}
+
+header img.profile-picture {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+}
+
+nav {
+    width: 25%;
+    background-color: #8089cb;
+    padding: 15px;
+    border-right: 1px solid #ccc;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+section {
+    width: 50%;
+    padding: 20px;
+}
+
+aside {
+    width: 25%;
+    background-color: #8089cb;
+    padding: 15px;
+    border-left: 1px solid #ccc;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ccc;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiv */
+
+/* tablets potret */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img.profile-picture {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    nav, aside, section {
+        width: 100%;
+        border: none;
+    }
+
+    nav {
+        order: 1;
+        padding: 0;
+    }
+
+    aside {
+        order: 3;
+        padding: 10px;
+    }
+
+    section {
+        order: 2;
+        padding: 10px;
+    }
+}
+
+/* Tablet Landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav {
+        width: 25%; 
+        
+    }
+
+    section {
+        width: 75%; 
+    }
+
+    aside {
+        width: 100%; 
+       
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+/* Handphone */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header img.profile-picture {
+        width: 50px;
+        height: 50px;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    nav, section, aside {
+        width: 100%;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-bottom: 5px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right, .footer-center {
+        width: 100%;
+        padding: 10px 0;
+    }
+}

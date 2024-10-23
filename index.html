@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, initial-scale=1">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <img src="Profil.jpeg" alt="Profile Picture" class="profile-picture">
+        <h1>Profil Mahasiswa</h1>
+    </header>
+
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+                <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+                <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+                <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+            </ul>
+        </nav>
+
+        <section id="Content">
+            <div id="biodata">
+                <h2>Biodata</h2>
+                <p><strong>NIM:</strong> 2023081001</p>
+                <p><strong>Nama:</strong> Saddam Raditya K.</p>
+                <p><strong>Agama:</strong> Islam</p>
+                <p><strong>Tanggal Lahir:</strong> 11 Februari 2005</p>
+                <p><strong>Tempat Lahir:</strong> Jakarta</p>
+            </div>
+            <div id="pendidikan" style="display:none;">
+                <h2>Pendidikan</h2>
+                <p><strong>SD:</strong> SDN Bintaro 12 Pagi</p>
+                <p><strong>SMP:</strong> SMPN 178 Jakarta Selatan</p>
+                <p><strong>SMA:</strong> SMAS Triguna Jakarta</p>
+                <p><strong>Kuliah:</strong> Universitas Pembangunan Jaya</p>
+            </div>
+            <div id="pengalaman" style="display:none;">
+                <h2>Pengalaman</h2>
+                <p>Anggota 3 KPPS Presiden 2024</p>
+                <p>Anggota Kominfo HIMASIF Periode 2024-2025</p>
+                <p>Anggota Perlengkapan Green Campus Pioneer 2024</p>
+            </div>
+            <div id="keahlian" style="display:none;">
+                <h2>Keahlian</h2>
+                <p>Saya bisa menggunakan VSCode dengan bahasa (HTML, CSS, PHP), Adobe Premiere Pro, OBS, Draw.io, dan Canva.</p>
+            </div>
+        </section>
+
+        <aside>
+            <h2>Hobi</h2>
+            <ul>
+                <li>Travelling</li>
+                <li>Berlari</li>
+                <li>Games</li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>LinkedIn: @Saddam Raditya Kahfilo</p>
+            <p>Twitter: @Saddam</p>
+            <p>Instagram: @Saddam.Kahfilo</p>
+        </div>
+        <div class="footer-right">
+            <p>Saddam Profile</p>
+            <p>This web is developed by Saddam.</p>
+        </div>
+        <div class="footer-center">
+            <p>&copy; Copyright 2024. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            document.getElementById('biodata').style.display = 'none';
+            document.getElementById('pendidikan').style.display = 'none';
+            document.getElementById('pengalaman').style.display = 'none';
+            document.getElementById('keahlian').style.display = 'none';
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
